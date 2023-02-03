@@ -1,0 +1,46 @@
+﻿<tr> 
+  <td><img src="images/space_1.gif" width="8" height="8"></td>
+</tr>
+<tr> 
+  <td><table width="750" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#5DA525">
+      <tr> 
+        <td bordercolor="#E9F4E3" bgcolor="#E9F4E3"><table width="750" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#E9F4E3">
+            <tr> 
+              <td class="bt_bgcolor"> <div align="right">
+              	  <!--input type='radio' name="excelaction" value='view' <%if(szExcelAction.equals("view")){out.print("checked");}%> >檢視報表-->
+              	  <input type='radio' name="excelaction" value='download' <%if(szExcelAction.equals("download")){out.print("checked");}%> >下載報表
+                  <%if(Utility.getPermission(request,report_no,"P")){//Print--有列印權限時 %>                       	        	                                   		     			        
+              	  <a href="javascript:doSubmit_RptStyle_BR('<%=report_no%>','createRpt');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image411','','images/bt_execb.gif',1)"><img src="images/bt_exec.gif" name="Image411" width="66" height="25" border="0" id="Image41"></a> 
+              	  <%}%>
+                  <a href="javascript:AskReset(this.document.forms[0]);" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image511','','images/bt_cancelb.gif',0)"><img src="images/bt_cancel.gif" name="Image511" width="66" height="25" border="0" id="Image51"></a> 
+                  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image611','','images/bt_reporthelpb.gif',1)"><img src="images/bt_reporthelp.gif" name="Image611" width="80" height="25" border="0" id="Image61"></a> 
+                </div></td>
+            </tr>
+            <tr> 
+               <td class="menu_bgcolor"> <table width="750" border="0" align="center" cellpadding="1" cellspacing="1" class="sbody">
+                  <tr class="sbody"> 
+                    <td width="100"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','BankList')"><font color='black'>1.金融機構</font></a></td>                            
+                    <td width="100"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','RptColumn')"><font color='black'>2.報表欄位</font></a></td>
+                    <td width="100"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','RptOrder')"><font color='black'>3.排序欄位</font></a></td>
+                    <td width="100"><img src="images/2_icon_01.gif" width="16" height="16" align="absmiddle"> 
+                      <a href="#"><font color="#CC6600">4.報表格式</font></a>
+                    </td>                                                                                   
+                  </tr>
+                </table></td>
+            </tr>
+            
+            <tr> 
+              <td bgcolor="#E9F4E3"><div align="center"> 
+                  <table width="200" border="0" align="center" cellpadding="1" cellspacing="1">
+                    <tr> 
+                      <td><div align="center"><a href="javascript:fn_ShowPanel('<%=report_no%>','SaveRpt')" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/bt_savereportb.gif',1)"><img src="images/bt_savereport.gif" name="Image9" width="86" height="25" border="0"></a></div></td>
+                      <td><div align="center"><a href="javascript:fn_ShowPanel('<%=report_no%>','ReadRpt')" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/bt_readreportb.gif',1)"><img src="images/bt_readreport.gif" name="Image10" width="86" height="25" border="0"></a></div></td>
+                    </tr>
+                  </table>
+                </div></td>
+            </tr>                    
+            
+          </table></td>
+      </tr>
+    </table></td>
+</tr>

@@ -1,0 +1,103 @@
+﻿
+WMdataDir	     C:\\BOAF\\BOAF\\Input\\WM
+WMTempBKDir      C:\\BOAF\\BOAF\\Temp\\WM
+WMdataBKDir      C:\\BOAF\\BOAF\\Backup\\WM
+From_Addr        normal@tradevan.com.tw
+AgriBank_Addr1   chiahao@agribank.com.tw
+AgriBank_Addr2   thomas@agribank.com.tw
+AgriBank_Addr3   yanjane.shi@tradevan.com.tw
+feb_Addr1   	 lusufang@boaf.gov.tw
+feb_Addr2   	 darren@boaf.gov.tw
+feb_Addr3   	 yhlin@boaf.gov.tw
+feb_Addr4   	 yanjane.shi@tradevan.com.tw
+feb_Agri_Addr    yanjane.shi@tradevan.com.tw
+#feb_Agri_Addr:金庫上傳報表檔,通知農金局人員e-mail
+UserID           yanjane.shi@tradevan.com.tw
+PWD              super76
+Auth             false
+SMTP_Host        wm.tradevan.com.tw
+WebSite          http://localhost/pages/
+BOAFWebSite      http://localhost:99/pages/
+MISWebSite       http://localhost:96/pages/
+Send_Mail        true
+UploadSize       20000
+SESSION_TIMEOUT  1800
+Debug            true
+logDir           C:\\BOAF\\BOAF\\logDir
+xlsDir           C:\\BOAF\\MIS\\xlsDir
+rtfDir           C:\\BOAF\\MIS\\rtfDir
+reportDir        C:\\BOAF\\MIS\\reportDir
+schemaDir       C:\\BOAF\\MIS\\schemaDir
+profileDir       C:\\BOAF\\MIS\\profileDir
+febxlsDir		 C:\\BOAF\\MIS\\febxlsDir
+febBKxlsDir		 C:\\BOAF\\MIS\\febxlsDir\\xlsDirBK
+#主要經營指標/各會員別放款金額一覽表
+febxlsDir_FR001WB	 C:\\BOAF\\MIS\\febxlsDir\\FR001WB
+febBKxlsDir_FR001WB	 C:\\BOAF\\MIS\\febxlsDir\\FR001WB\\xlsDirBK
+#解釋函令/限制或核准業務/處分書
+febxlsDir_MCRptAll	 C:\\BOAF\\MIS\\febxlsDir\\MCRptAll
+febBKxlsDir_MCRptAll C:\\BOAF\\MIS\\febxlsDir\\MCRptAll\\xlsDirBK
+#舞弊案件
+febxlsDir_MC012W	 C:\\BOAF\\MIS\\febxlsDir\\MC012W
+febBKxlsDir_MC012W	 C:\\BOAF\\MIS\\febxlsDir\\MC012W\\xlsDirBK
+#檢舉書
+febxlsDir_MC014W	 C:\\BOAF\\MIS\\febxlsDir\\MC014W
+febBKxlsDir_MC014W	 C:\\BOAF\\MIS\\febxlsDir\\MC014W\\xlsDirBK
+#理監事基本資料
+febxlsDir_FR055W	 C:\\BOAF\\MIS\\febxlsDir\\FR055W
+febBKxlsDir_FR055W	 C:\\BOAF\\MIS\\febxlsDir\\FR055W\\xlsDirBK
+#金庫財務報表
+AgriBankDir      C:\\BOAF\\BOAF\\AgriBankData
+AgriBankDir_remote  AgriBankDir
+febxlsDir_AgriBank	 C:\\BOAF\\MIS\\febxlsDir\\AgriBank
+febBKxlsDir_AgriBank C:\\BOAF\\MIS\\febxlsDir\\AgriBank\\xlsDirBK
+AgriBank_transferDir  C:\\BOAF\\BOAF\\AgriBankDir
+#農信保報表
+acgfDir          acgfDir
+febWebSite       http://122.116.174.191/ex/BOAF.aspx?
+BOAFDBURL        jdbc:oracle:thin:@172.31.70.50:1525:T05B
+GenerateRptDir    C:\\BOAF\\GenerateRptDir
+ClientRptDir      C:\\BOAF\\rptDir
+serverRptDir     /export/home/pboafmgr/
+rptIP            172.31.70.50
+rptID            pboafmgr
+rptPwd           TVPBOAFMGR
+feb_serverRptDir /export/home/pboafmgr/
+feb_serverRptDir_FR001WB /export/home/pboafmgr/財務資料/農漁
+#feb_serverRptDir_FR001WB //boaf/財務資料/農漁會信用部主要經營指標
+feb_serverRptDir_MCRptAll /export/home/pboafmgr/限制或核准業務函令
+#feb_serverRptDir_MCRptAll //boaf/限制或核准業務函令(含各別農漁會解釋函令)
+feb_serverRptDir_MC012W /export/home/pboafmgr/重大偶發/舞弊案件
+#feb_serverRptDir_MC012W //boaf/重大偶發/舞弊案件
+feb_serverRptDir_MC014W /export/home/pboafmgr/民眾/檢書
+#feb_serverRptDir_MC014W //boaf/民眾舉發/檢舉書
+feb_serverRptDir_FR055W /export/home/pboafmgr/理監事基本資料/理監事基本資料
+#feb_serverRptDir_FR055W //boaf/理監事基本資料/理監事基本資料
+feb_serverRptDir_AgriRpt01 /export/home/pboafmgr/財務資料/農業金庫財務資料
+#feb_serverRptDir_AgriRpt01 //boaf/財務資料/農業金庫財務資料
+feb_serverRptDir_AgriRpt02 /export/home/pboafmgr/理監事基本資料/金庫重大決議
+#feb_serverRptDir_AgriRpt02 //boaf/理監事基本資料/金庫之董監事會議重大決議
+rptIP_feb        172.31.70.50
+rptID_feb        pboafmgr
+rptPwd_feb       TVPBOAFMGR
+headPersonDir	 C:\\BOAF\\BOAF\\WLX_WTT07\\HeadPerson.txt
+notifyDir	 C:\\BOAF\\BOAF\\exp\\wlx\\WLX_Notify\\
+APServer=MIS
+#農信保財務報表
+acgfDir           acgfDir
+A01_7_begin_date  10201
+#開放至農委會報表
+coaxlsDir	 C:\\BOAF\\MIS\\coaxlsDir
+coaBKxlsDir	 C:\\BOAF\\MIS\\coaxlsDir\\xlsDirBK
+rptIP_coa        172.31.70.50
+rptID_coa        pboafmgr
+rptPwd_coa       TVPBOAFMGR
+#開放至官網查詢
+openDir	    C:\\BOAF\\BOAF\\toboafwww\\office.txt
+#金庫FTPServer
+ftpIP_Agri       59.124.54.12
+ftpID_Agri       TNBOAF
+ftpPwd_Agri      TNBOAF123
+wlx_uploadDir    C:\\BOAF\\BOAF\\WLX_UPLOAD
+#轉檔報表
+rptTransServer   http://localhost:80/RptConvert/services/ConvertService?wsdl

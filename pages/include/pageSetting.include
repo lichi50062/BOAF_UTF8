@@ -1,0 +1,16 @@
+﻿<%//99.04.06 顯示報表列印格式 by 2295 %>
+<%if(showPageSetting){%>
+<table border="1" width="600" align="center" height="54" bgcolor="#FFFFF" bordercolor="#76C657">
+  <tr>
+  	<td bgcolor="#E9F4E3" colspan="2">
+       <div align="center">
+  		<table width="574" border="0" cellpadding="1" cellspacing="1">
+  		<tr><td width="34"><img src="/pages/images/print_1.gif" width="34" height="34"></td>
+            <td width="492"><font color="#CC6600">本報表採用A4紙張<%=(setLandscape==true?"橫":"直")%>印</font></td>                              
+        </tr>
+        </table>
+        </div>
+    </td>
+  </tr>  
+</table>
+<%}%>

@@ -1,0 +1,55 @@
+﻿<!-- 金融機構.可挑選項目-->
+<tr class="sbody"> 
+  <td class="body_bgcolor"> <table width="750" border="0" align="center" cellpadding="1" cellspacing="1" class="body_bgcolor">
+        <tr> 
+        <td width="215">
+        <table>
+        <tr class="sbody"><td align="center" class="chooseitem_bgcolor">可選擇項目</td></tr>
+        <tr><td>  
+        <select multiple  size=10  name="BankListSrc" ondblclick="javascript:movesel(this.document.forms[0].BankListSrc,this.document.forms[0].BankListDst);fn_changeBankListSrc(document.forms[0]);" style="width: 292; height: 160">							
+		</select>
+		</td></tr>
+		</table>
+        </td>
+        <td width="52"><table width="40" border="0" align="center" cellpadding="3" cellspacing="3">
+            <tr> 
+              <td>
+              <div align="center">                                 
+              <a href="javascript:movesel(this.document.forms[0].BankListSrc,this.document.forms[0].BankListDst);fn_changeBankListSrc(document.forms[0]);"><img src="images/arrow_right.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+            <tr> 
+              <td>
+              <div align="center">                                  
+              <a href="javascript:moveallsel(this.document.forms[0].BankListSrc,this.document.forms[0].BankListDst);"><img src="images/arrow_rightall.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+            <tr> 
+              <td>
+              <div align="center">                                  
+              <a href="javascript:movesel(this.document.forms[0].BankListDst,this.document.forms[0].BankListSrc);fn_changeBankListSrc(document.forms[0]);""><img src="images/arrow_left.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+            <tr> 
+              <td height="22">
+              <div align="center">                                  
+              <a href="javascript:moveallsel(this.document.forms[0].BankListDst,this.document.forms[0].BankListSrc);"><img src="images/arrow_leftall.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+          </table></td>
+        <td width="340">
+        <table>
+        <tr class="sbody"><td align="center" class="chooseitem_bgcolor">已選擇項目</td></tr> 
+        <tr><td>
+        <select multiple size=10  name="BankListDst" ondblclick="javascript:movesel(this.document.forms[0].BankListDst,this.document.forms[0].BankListSrc);fn_changeBankListSrc(document.forms[0]);"" style="width: 292; height: 160">							
+		</select>
+		</td></tr>
+		</table>
+      </tr>
+    </table>
+  </td>
+</tr>

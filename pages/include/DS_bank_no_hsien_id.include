@@ -1,0 +1,77 @@
+﻿<%//彈性報表使用的總機構代碼/縣市別代碼
+	DataObject bean = null;  
+	List tbankList = Utility.getBankList(request);//可選機構代號權限設定(農漁會)
+    // XML Ducument for 總機構代碼 begin
+    out.println("<xml version=\"1.0\" encoding=\"UTF-8\" ID=\"TBankXML\">");    
+    out.println("<datalist>"); 
+	/*A02違反法定比率(DS002W).沒有全部的資料
+	 *A05資本適足率資料(DS005W).目前沒有做到縣市別統計
+	  ATM裝設紀錄資料(DS009W)無金額單位.各別機構有各位的ATM裝設地點.所以無縣市別統計 by 2295
+	  各農漁會委外內部作業資料(DS010W)各別機構有各受託債權催收機構.所以無縣市別統計 
+	  承受擔保品延長處分申報情形資料(DS013W)無農.漁會.地方主管機關全部  
+      金融機構警示帳戶調查資料(DS014W)無農.漁會.地方主管機關全部
+ 	  牌告利率每季申報資料(DS015W).無全部資料
+ 	*/  
+    if(!(report_no.equals("DS002W") || report_no.equals("DS005W") ||  report_no.equals("DS009W") || report_no.equals("DS010W") ||
+         report_no.equals("DS013W") || report_no.equals("DS014W") ||  report_no.equals("DS015W"))){
+         if(muser_id.equals("A111111111") || muser_bank_type.equals("2")){//95.11.10 登入者為A111111111 or 農金局時,才可選全部
+            out.println("<data>"); 
+            out.println("<BankYear>ALL</BankYear>");      
+            out.println("<BnType>1</BnType>");
+            out.println("<BankType>6</BankType>");
+            out.println("<HsienId>ALL</HsienId>");
+            out.println("<bankValue>ALL</bankValue>");
+            out.println("<bankName>全部</bankName>");
+            out.println("</data>");      
+            out.println("<data>");      
+            out.println("<BankYear>ALL</BankYear>");      
+            out.println("<BnType>1</BnType>");
+            out.println("<BankType>7</BankType>");
+            out.println("<HsienId>ALL</HsienId>");
+            out.println("<bankValue>ALL</bankValue>");
+            out.println("<bankName>全部</bankName>");
+            out.println("</data>");      
+            out.println("<data>");   
+            out.println("<BankYear>ALL</BankYear>");         
+            out.println("<BnType>1</BnType>");
+            out.println("<BankType>ALL</BankType>");
+            out.println("<HsienId>ALL</HsienId>");
+            out.println("<bankValue>ALL</bankValue>");
+            out.println("<bankName>全部</bankName>");
+            out.println("</data>");      
+         }
+    }
+    
+    if(tbankList != null){
+       for(int i=0;i< tbankList.size(); i++) {
+           bean =(DataObject)tbankList.get(i);
+           out.println("<data>");        
+           out.println("<BankYear>"+bean.getValue("m_year").toString()+"</BankYear>");
+           out.println("<BnType>"+bean.getValue("bn_type")+"</BnType>");
+           out.println("<BankType>"+bean.getValue("bank_type")+"</BankType>");
+           out.println("<HsienId>"+bean.getValue("hsien_id")+"</HsienId>");
+           out.println("<bankValue>"+bean.getValue("bank_no")+"</bankValue>");
+           out.println("<bankName>"+bean.getValue("bank_no")+bean.getValue("bank_name")+"</bankName>");
+           out.println("</data>");
+           //System.out.println("<option>"+bean.getValue("bank_no")+"&nbsp;"+bean.getValue("bank_name")+"</option>");
+       }       
+    }
+    out.println("</datalist>\n</xml>");
+    // XML Ducument for 總機構代碼 end 	
+    
+    List cityList = Utility.getCity();
+	// XML Ducument for 縣市別 begin
+    out.println("<xml version=\"1.0\" encoding=\"UTF-8\" ID=\"CityXML\">");
+    out.println("<datalist>");
+    for(int i=0;i< cityList.size(); i++) {
+        bean =(DataObject)cityList.get(i);
+        out.println("<data>");
+        out.println("<cityType>"+bean.getValue("hsien_id")+"</cityType>");
+        out.println("<cityName>"+bean.getValue("hsien_name")+"</cityName>");
+        out.println("<cityValue>"+bean.getValue("hsien_id")+"</cityValue>");
+        out.println("<cityYear>"+bean.getValue("m_year").toString()+"</cityYear>");
+        out.println("</data>");
+    }
+    out.println("</datalist>\n</xml>");
+    // XML Ducument for 縣市別 end
+%>    

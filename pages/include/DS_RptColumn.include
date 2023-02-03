@@ -1,0 +1,57 @@
+﻿<!-- 報表欄位.可挑選項目-->
+<tr> 
+  <td class="body_bgcolor"> <table width="750" border="0" align="center" cellpadding="1" cellspacing="1" class="body_bgcolor">
+      <tr> 
+        <td width="215">  
+        <select multiple  size=10  name="FieldListSrc" ondblclick="javascript:movesel(this.document.forms[0].FieldListSrc,this.document.forms[0].FieldListDst);" style="width: 292; height: 190">							
+		</select>
+        </td>
+        <td width="52"><table width="40" border="0" align="center" cellpadding="3" cellspacing="3">
+            <tr> 
+              <td>
+              <div align="center">                                 
+              <a href="javascript:movesel(this.document.forms[0].FieldListSrc,this.document.forms[0].FieldListDst);"><img src="images/arrow_right.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+            <tr> 
+              <td>
+              <div align="center">                                  
+              <a href="javascript:moveallsel(this.document.forms[0].FieldListSrc,this.document.forms[0].FieldListDst);"><img src="images/arrow_rightall.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+            <tr> 
+              <td>
+              <div align="center">                                  
+              <a href="javascript:movesel(this.document.forms[0].FieldListDst,this.document.forms[0].FieldListSrc);"><img src="images/arrow_left.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+            <tr> 
+              <td height="22">
+              <div align="center">                                  
+              <a href="javascript:moveallsel(this.document.forms[0].FieldListDst,this.document.forms[0].FieldListSrc);"><img src="images/arrow_leftall.gif" width="24" height="22" border="0"></a>
+              </div>
+              </td>
+            </tr>
+          </table></td>
+        <td width="340"> 
+       <select multiple size=10  name="FieldListDst" ondblclick="javascript:movesel(this.document.forms[0].FieldListDst,this.document.forms[0].FieldListSrc);" style="width: 292; height: 190">							
+		</select>
+       
+        </td>
+        <td width="130"><table width="116" border="0" align="center" cellpadding="3" cellspacing="3">
+            <tr>                                   
+              <td width="24"><div align="center"><a href="javascript:moveup(this.document.forms[0].FieldListDst);"><img src="images/arrow_up.gif" width="24" height="22" border="0"></a></div></td>                        				        
+              <td width="71" class="sbody">欄位上移</td>
+            </tr>
+            <tr> 
+              <td width="24"><div align="center"><a href="javascript:movedown(this.document.forms[0].FieldListDst);"><img src="images/arrow_down.gif" width="24" height="22" border="0"></a></div></td>                        				        
+              <td class="sbody">欄位下移</td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+  </td>
+</tr>

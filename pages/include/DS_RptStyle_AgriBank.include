@@ -1,0 +1,122 @@
+﻿<!-- 報表格式(範本檔)-->
+<tr> 
+    <td width="824"><img src="images/space_1.gif" width="8" height="8"></td>
+</tr>        
+<tr> 
+    <td width="824">
+    <table width="706" border="1" align="center" cellpadding="0" cellspacing="0" class="bordercolor">
+        <tr> 
+          <td bordercolor="#E9F4E3" bgcolor="#E9F4E3" width="766">
+          <table width="764" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#E9F4E3">
+              <tr> 
+                <td class="bt_bgcolor" width="789"> 
+                  <div align="right">
+                	  <!--input type='radio' name="excelaction" value='view' checked >檢視報表-->
+                	  <input type='radio' name="excelaction" value='download' checked >下載報表
+                    <%if(Utility.getPermission(request,report_no,"P")){//Print--有列印權限時 %>                   	        	                                   		     			        
+                	  <a href="javascript:doSubmit_RptStyle('<%=report_no%>','createRpt');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image411','','images/bt_execb.gif',1)"><img src="images/bt_exec.gif" name="Image411" width="66" height="25" border="0" id="Image41"></a> 
+                	  <%}%>
+                    <a href="javascript:AskReset(this.document.forms[0]);" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image511','','images/bt_cancelb.gif',0)"><img src="images/bt_cancel.gif" name="Image511" width="66" height="25" border="0" id="Image51"></a> 
+                    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image611','','images/bt_reporthelpb.gif',1)"><img src="images/bt_reporthelp.gif" name="Image611" width="80" height="25" border="0" id="Image61"></a> 
+                  </div>
+                </td>
+              </tr>
+              <tr> 
+                <td class="menu_bgcolor" width="789"> 
+                <table width="700" border="0" align="center" cellpadding="1" cellspacing="1" class="sbody">
+                    <tr class="sbody">                       
+                      <td width="100"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','RptColumn')"><font color='black'>1.報表欄位</font></a></td>
+                      <!--td width="100"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','RptOrder')"><font color='black'>2.排序欄位</font></a></td-->
+                      <td width="100"><img src="images/2_icon_01.gif" width="16" height="16" align="absmiddle"> 
+                        <a href="#"><font color="#CC6600">2.報表格式</font></a>      
+                      </td>                                                                                   
+                    </tr>
+                </table>
+                </td>
+              </tr>
+              
+              <tr class="body_bgcolor"> 
+              <td width="789"> 
+              <table width="785" height="1">
+              <tr>
+                <td width="22" height="19"></td>
+                <td width="538" height="19"></td>
+                <td width="259" class="sbody" height="19">範本名稱&nbsp;&nbsp;&nbsp;</td>
+                <td width="52" class="sbody" height="19">&nbsp; 建置者&nbsp;</td>
+                <td width="60" class="sbody" height="19">&nbsp; 建置日期</td>
+                <td width="121" height="19"></td>
+              </tr>
+
+              <tr>
+              <td valign="top" width="22" rowspan="3" height="1"><img src="images/2_icon_01.gif" width="16" height="16" align="absmiddle"></td>
+              <td valign="top" width="538" class="report_sbody" height="1">請點選範本名稱</td>
+              <td valign="top" width="159" rowspan="3" height="1">
+              <select multiple  size=6  name="template_list" style="width: 252; height: 114">							
+                   <%if(templateList == null || templateList.size() == 0){%>
+                    <option>&nbsp;</option>
+                    <%}else{%>
+                    <%  for(int i=0;i<templateList.size();i++){%>
+                    <option value='<%=(String)((HashMap)templateList.get(i)).get("template")%>:<%=(String)((HashMap)templateList.get(i)).get("createUser")%>:<%=(String)((HashMap)templateList.get(i)).get("updateDate")%>'>
+                    <%=(String)((HashMap)templateList.get(i)).get("showTemplate")%>                         
+                    </option>
+                    <%  }//end of for
+                     }//end of templateList != null
+                    %> 
+              </select>
+              </td>
+              <td valign="top" width="103" rowspan="3" height="1" >
+              <select multiple  size=6  name="CreateUser_list" style="width: 80; height: 114" disabled>							
+                  <%if(templateList == null || templateList.size() == 0){%>
+                    <option>&nbsp;</option>
+                    <%}else{%>
+                    <%  for(int i=0;i<templateList.size();i++){%>
+                    <option value='<%=(String)((HashMap)templateList.get(i)).get("template")%>:<%=(String)((HashMap)templateList.get(i)).get("createUser")%>:<%=(String)((HashMap)templateList.get(i)).get("updateDate")%>'>                          
+                    <%=(String)((HashMap)templateList.get(i)).get("showCreateUser")%>                          
+                    </option>
+                    <%  }//end of for
+                     }//end of templateList != null
+                    %> 
+              </select>                   
+              </td>
+              <td valign="top" width="89" rowspan="3" height="1">
+               <select multiple  size=6  name="UpdateDate_list" style="width: 84; height: 114" disabled>			
+                    <%if(templateList == null || templateList.size() == 0){%>
+                    <option>&nbsp;</option>
+                    <%}else{%>
+                    <%  for(int i=0;i<templateList.size();i++){%>
+                    <option value='<%=(String)((HashMap)templateList.get(i)).get("template")%>:<%=(String)((HashMap)templateList.get(i)).get("createUser")%>:<%=(String)((HashMap)templateList.get(i)).get("updateDate")%>'>
+                    <%=(String)((HashMap)templateList.get(i)).get("showUpdateDate")%>
+                    </option>
+                    <%  }//end of for
+                     }//end of templateList != null
+                    %> 
+               </select>
+              </td>
+              <td valign="top" width="121" rowspan="3" height="1"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','ReadRpt');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/bt_readreportb.gif',1)"><img src="images/bt_readreport.gif" name="Image9" width="86" height="25" border="0"></a>
+                <p><a href="javascript:doSubmit_RptStyle('<%=report_no%>','DeleteRpt');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image91','','images/bt_deleteb.gif',1)"><img src="images/bt_delete.gif" name="Image91" width="66" height="25" border="0"></a></p>
+                <p></p>
+              </td>
+              </tr>
+              
+              <tr>
+              <td valign="top" width="538" class="report_sbody" height="1">1.按【讀取格式檔】按鈕:<font color="#800000">載入格式檔</font></td>
+              </tr>
+              <tr>
+              <td valign="top" width="538" class="report_sbody" height="19">2.按【刪除】按鈕:<font color="red">刪除格式檔</font><p></p><p></p></td>
+              </tr>
+              <tr>
+              <td width="22" valign="top" height="34"><img src="images/2_icon_01.gif" width="16" height="16" align="absmiddle"></td>
+              <td class="report_sbody" width="538" height="34">請輸入欲儲存格式之名稱<br>(再按【儲存格式檔】按鈕): </td>
+              <td colspan="3" width="328" height="34"><input type="text" name="template" size="40"></td>
+              <td width="121" height="34"><a href="javascript:doSubmit_RptStyle('<%=report_no%>','SaveRpt');" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image92','','images/bt_savereportb.gif',1)"><img src="images/bt_savereport.gif" name="Image92" width="86" height="25" border="0"></a></td>
+              </tr>
+
+              </table>
+              </td>
+              </tr>
+          </table>
+          </td>
+        </tr>
+    </table>
+    </td>
+</tr>

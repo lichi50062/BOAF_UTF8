@@ -1,0 +1,39 @@
+.mtext {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 16px
+}
+.stext {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px
+}
+.mbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 16px; LINE-HEIGHT: 150%
+}
+.sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%
+}
+.emtext {
+	FONT-FAMILY: times new roman, serif; FONT-SIZE: 16px
+}
+.estext {
+	FONT-FAMILY: "arial", "helvetica"; FONT-SIZE: 13px
+}
+.title {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 19px
+}
+.maf {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 12px; LINE-HEIGHT: 150%
+}
+A:hover {
+	COLOR: #ff0000; FONT-FAMILY: ""
+}
+A:active {
+	COLOR: #ff0000; FONT-FAMILY: ""
+}
+A:link {
+	COLOR: #0000bb; FONT-FAMILY: ""
+}
+A:visited {
+	COLOR: #7721a5; FONT-FAMILY: ""
+}
+.t4 {
+	FONT-FAMILY: "標楷體"; FONT-SIZE: 22px; LINE-HEIGHT: 18pt
+}

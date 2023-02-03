@@ -1,0 +1,40 @@
+﻿<%//基本報表使用的總機構代碼/縣市別代碼
+	DataObject bean = null;  
+	List tbankList = Utility.getBankList(request);//可選機構代號權限設定(農漁會)
+    // XML Ducument for 總機構代碼 begin
+    out.println("<xml version=\"1.0\" encoding=\"UTF-8\" ID=\"TBankXML\">");    
+    out.println("<datalist>"); 
+	
+    if(tbankList != null){
+       for(int i=0;i< tbankList.size(); i++) {
+           bean =(DataObject)tbankList.get(i);
+           out.println("<data>");        
+           out.println("<BankYear>"+bean.getValue("m_year").toString()+"</BankYear>");
+           out.println("<BnType>"+bean.getValue("bn_type")+"</BnType>");
+           out.println("<BankType>"+bean.getValue("bank_type")+"</BankType>");
+           out.println("<HsienId>"+bean.getValue("hsien_id")+"</HsienId>");
+           out.println("<bankValue>"+bean.getValue("bank_no")+"</bankValue>");
+           out.println("<bankName>"+bean.getValue("bank_no")+bean.getValue("bank_name")+"</bankName>");
+           out.println("</data>");
+           //System.out.println("<option>"+bean.getValue("bank_no")+"&nbsp;"+bean.getValue("bank_name")+"</option>");
+       }       
+    }
+    out.println("</datalist>\n</xml>");
+    // XML Ducument for 總機構代碼 end 	
+    
+    List cityList = Utility.getCity();
+	// XML Ducument for 縣市別 begin
+    out.println("<xml version=\"1.0\" encoding=\"UTF-8\" ID=\"CityXML\">");
+    out.println("<datalist>");
+    for(int i=0;i< cityList.size(); i++) {
+        bean =(DataObject)cityList.get(i);
+        out.println("<data>");
+        out.println("<cityType>"+bean.getValue("hsien_id")+"</cityType>");
+        out.println("<cityName>"+bean.getValue("hsien_name")+"</cityName>");
+        out.println("<cityValue>"+bean.getValue("hsien_id")+"</cityValue>");
+        out.println("<cityYear>"+bean.getValue("m_year").toString()+"</cityYear>");
+        out.println("</data>");
+    }
+    out.println("</datalist>\n</xml>");
+    // XML Ducument for 縣市別 end
+%>    

@@ -1,0 +1,11 @@
+<tr colspan=0 bordercolor=#63B1AE bgcolor='#408C87'><img src=images/hotnews.gif width=70 height=18></tr>
+<script language=JavaScript>
+document.write("<marquee  bgcolor=#70BEBB scrollamount='1' scrolldelay='6' direction= 'up' width='380' id=xiaoqing height='110' onmouseover=xiaoqing.stop() onmouseout=xiaoqing.start()>"); 
+document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size='2'");
+document.write("color=white>105/01/09 12:00&nbsp;測試網站-無URL</font><br>");
+document.write("&nbsp;<a href=\"javascript:doLink('/pages/DomloadNotify.jsp?seq_no=24');\"><img src=images/download.gif border=0></a>&nbsp;<font size='2' ");
+document.write("color=black>105/01/08 11:00&nbsp;堃峯碁-陳冲-無URL</font><br>");
+document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size='2'");
+document.write("color=black>105/01/08 02:00&nbsp;<a href=\"javascript:doLink('http://tw.yahoo.com');\">測試網站-有URL</a></font><br>");
+document.write("</marquee>");
+</script>

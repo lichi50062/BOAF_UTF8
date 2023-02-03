@@ -1,0 +1,83 @@
+﻿
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript">
+<!--
+var args = window.dialogArguments
+try{
+document.title = args[0]+"　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　"; //設置標題
+//空白要用全形的空白才能顯示
+}catch(e){
+}
+
+//-->
+</script>
+<title></title>
+<style type="text/css">
+<!--
+body {
+ margin-left: 0px;
+ margin-top: 0px;
+ background-color: menu;
+ overflow: hidden;
+ overflow-x:hidden;
+    overflow-y:hidden;
+}
+-->
+</style>
+<script language="javascript">
+function init()
+{
+ var args = window.dialogArguments
+ 
+ try{
+  message.innerHTML = "<font size=2>"+args[1]+"</font>"; //設置提示的信息
+  if(args[2] == 1)    //設置按鈕的選中狀態
+   ok.focus(); 
+  else
+   cancel.focus();
+ }catch(e){ 
+ }
+ ok.attachEvent("onclick",okClick); //設置YES按鈕的事件處理函數
+ cancel.attachEvent("onclick",cancelClick);//設置NO按鈕的事件處理函數
+}
+function okClick()//YES按鈕的事件處理函數
+{
+  window.returnValue = true;
+  window.close();
+}
+function cancelClick()//按鈕的事件處理函數
+{
+  window.returnValue = false
+  window.close();
+}
+window.attachEvent("onload",init)
+</script>
+</head>
+
+<body>
+<table width="294"  with="100" border="0" cellspacing="5">
+  <tr>
+    <td width="33"><div align="left"><img border="0" src="images/ico.gif" width="33" height="32"></div></td>
+    <td width="162"><div align="left" id="message"></div></td>
+    <td width="63">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="33">
+      <div align="right">
+        　    
+      </div></td>
+    <td width="162">
+        <input name="ok" type="button" id="ok" value="  確定  ">&nbsp;&nbsp; <input name="cancel" type="button" id="cancel" value="  取消  "> 
+    </td>
+    <td width="63">
+      <div align="left">
+        　
+      </div></td>
+  </tr>
+</table>
+</body>
+</html>
+
+

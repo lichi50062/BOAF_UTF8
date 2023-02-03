@@ -1,0 +1,73 @@
+.mtext {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 16px
+}
+.stext {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px
+}
+.mbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 16px; LINE-HEIGHT: 150%
+}
+.sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%
+}
+.emtext {
+	FONT-FAMILY: times new roman, serif; FONT-SIZE: 16px
+}
+.estext {
+	FONT-FAMILY: "arial", "helvetica"; FONT-SIZE: 13px
+}
+.title {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 19px
+}
+.maf {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 12px; LINE-HEIGHT: 150%
+}
+
+A:active {
+	COLOR: #ff0000; FONT-FAMILY: ""
+}
+A:link {
+	COLOR: #0000bb; FONT-FAMILY: ""
+}
+A:visited {
+	COLOR: #7721a5; FONT-FAMILY: ""
+}
+.t4 {
+	FONT-FAMILY: "標楷體"; FONT-SIZE: 22px; LINE-HEIGHT: 18pt
+}
+
+.HdDataTdt   { font-family: Arial, Helvetica, sans-serif; font-size: 13px; white-space: nowrap; text-align: center; background-color: #9AD3D0; border-color: #FFFFFF; border-left-style: solid; border-left-width: 1; border-right-style: solid; border-right-width: 1 }
+.HdDataTd2   { font-family: Arial, Helvetica, sans-serif; font-size: 13px; white-space: nowrap; text-align: center; background-color: #F2F2F2; border-color: #FFFFFF; border-left-style: solid; border-left-width: 1; border-right-style: solid; border-right-width: 1 }
+.HdDataTd1   { font-family: Arial, Helvetica, sans-serif; font-size: 13px; white-space: nowrap; text-align: center; background-color: #FFFFE6; border-color: #FFFFFF; border-left-style: solid; border-left-width: 1; border-right-style: solid; border-right-width: 1 }
+
+
+.nameColor_sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: left; background-color: #D8EFEE;
+}
+.nameColor_sbody_right {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: right; background-color: #D8EFEE
+}
+.nameColor_sbody_center {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: center; background-color: #D8EFEE
+}
+
+.textColor_sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: left; background-color: #e7e7e7
+}
+.textColor_sbody_center {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: center; background-color: #e7e7e7
+}
+
+.listTitleColor_sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: left; background-color: #9AD3D0
+}
+
+.list2Color_sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: left; background-color: #D3EBE0
+}
+.list1Color_sbody {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: left; background-color: #e7e7e7
+}
+.list1Color_sbody_center {
+	FONT-FAMILY: "新細明體"; FONT-SIZE: 13px; LINE-HEIGHT: 150%; text-align: center; background-color: #D2F0FF
+}

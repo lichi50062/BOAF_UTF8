@@ -1,0 +1,14 @@
+﻿<!-- 金額單位-->
+<tr class="sbody">
+	<td width="118" bgcolor="#BDDE9C" height="1">金額單位 :</td>
+ 	<td width="416" bgcolor="#EBF4E1" height="1">
+	   <select size="1" name="Unit">
+	     <option value ='1' <%if((!Unit.equals("")) && Unit.equals("1")) out.print("selected");%>>元</option>
+	     <option value ='1000' <%if((!Unit.equals("")) && Unit.equals("1000")) out.print("selected");%>>千元</option>
+	     <option value ='10000' <%if((!Unit.equals("")) && Unit.equals("10000")) out.print("selected");%>>萬元</option>
+	     <option value ='1000000' <%if((!Unit.equals("")) && Unit.equals("1000000")) out.print("selected");%>>百萬元</option>
+	     <option value ='10000000' <%if((!Unit.equals("")) && Unit.equals("10000000")) out.print("selected");%>>千萬元</option>
+	     <option value ='100000000' <%if((!Unit.equals("")) && Unit.equals("100000000")) out.print("selected");%>>億元</option>
+	   </select>
+ 	</td>
+</tr>       

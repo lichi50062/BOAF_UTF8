@@ -1,0 +1,7 @@
+﻿<%
+	try {
+        //forward to next present jsp
+        rd.forward(request, response);
+    } catch (NullPointerException npe) {
+    }
+%>

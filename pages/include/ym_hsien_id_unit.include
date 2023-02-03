@@ -1,0 +1,73 @@
+﻿<%
+//99.04.06 顯示查詢日期/金融機構類別/縣市別/金額單位 by 2295 
+//99.04.08 add 營運中/裁撤別 by 2295
+%>
+
+<tr class="sbody">
+    <td width="118" class="<%=nameColor%>" height="1">查詢日期</td>
+    <td width="416" class="<%=textColor%>" height="1">
+    <input type="text" name="S_YEAR" size="3" maxlength="3" value="<%=YEAR%>"
+    <%if(showCityType) { //added by 2808 99.11.5%> 
+    	onChange="changeCity('CityXML', form.cityType, form.S_YEAR, form)"
+    <%} %> 
+    >
+      年      
+    <select id="hide1" name=S_MONTH>        						
+     <%
+     	for (int j = 1; j <= 12; j++) {
+     	if (j < 10){%>        	
+     	<option value=0<%=j%> <%if(String.valueOf(Integer.parseInt(MONTH)).equals(String.valueOf(j))) out.print("selected");%>>0<%=j%></option>        		
+     	<%}else{%>
+     	<option value=<%=j%> <%if(String.valueOf(Integer.parseInt(MONTH)).equals(String.valueOf(j))) out.print("selected");%>><%=j%></option>
+     	<%}%>
+     <%}%>
+     </select><font color='#000000'>月</font>
+    </td>
+</tr>
+<%if(showCancel_No){%>
+<tr class="sbody">
+    <td width="118" class="<%=nameColor%>" height="1">營運中/裁撤別</td>
+    <td width="416" class="<%=textColor%>" height="1">
+     <select name='CANCEL_NO' onChange="changeCity('CityXML', form.cityType, form.S_YEAR, form)">
+     	<option  value="N" <%if((!cancel_no.equals("")) && cancel_no.equals("N")) out.print("selected");%>>營運中</option>
+     	<option  value="Y" <%if((!cancel_no.equals("")) && cancel_no.equals("Y")) out.print("selected");%>>已裁撤</option>
+     </select>
+    </td>
+</tr>
+<%}%>
+<%if(showBankType){%>
+<tr class="sbody">
+<td width="118" class="<%=nameColor%>" height="1">金融機構類別</td>
+<td width="416" class="<%=textColor%>" height="1">  
+  <select size="1" name="bankType" onChange="checkCity();resetOption();changeTbank('TBankXML', form.tbank, form.cityType, form)">
+  <option value ='6' <%if((!bankType.equals("")) && bankType.equals("6")) out.print("selected");%>>農會</option>  
+  <option value ='7' <%if((!bankType.equals("")) && bankType.equals("7")) out.print("selected");%>>漁會</option>  
+  </select>
+</td>
+</tr>
+<%}%>
+<%if(showCityType){%>
+<tr class="sbody">
+<td width="118" class="<%=nameColor%>" height="1">縣市別</td>
+<td width="416" class="<%=textColor%>" height="1">
+  <select size="1" name="cityType" onChange="changeTbank('TBankXML', form.tbank, form.cityType, form)" >
+  </select>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  </td>
+</tr>
+<%}%>
+<%if(showUnit){%>
+<tr class="sbody">
+<td width="118" class="<%=nameColor%>" height="1">金額單位</td>
+<td width="416" class="<%=textColor%>" height="1">
+   <select size="1" name="Unit">
+     <option value ='1' <%if((!Unit.equals("")) && Unit.equals("1")) out.print("selected");%>>元</option>
+     <option value ='1000' <%if((!Unit.equals("")) && Unit.equals("1000")) out.print("selected");%>>千元</option>
+     <option value ='10000' <%if((!Unit.equals("")) && Unit.equals("10000")) out.print("selected");%>>萬元</option>
+     <option value ='1000000' <%if((!Unit.equals("")) && Unit.equals("1000000")) out.print("selected");%>>百萬元</option>
+     <option value ='10000000' <%if((!Unit.equals("")) && Unit.equals("10000000")) out.print("selected");%>>千萬元</option>
+     <option value ='100000000' <%if((!Unit.equals("")) && Unit.equals("100000000")) out.print("selected");%>>億元</option>
+   </select>
+ </td>
+</tr> 
+<%}%>  

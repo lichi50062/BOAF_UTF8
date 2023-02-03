@@ -1,0 +1,31 @@
+﻿<%
+RequestDispatcher rd = null;
+String actMsg = "";	
+String alertMsg = "";	
+String webURL = "";	
+String webURL_Y = "";	
+String webURL_N = "";
+boolean doProcess = false;	
+
+//取得session資料,取得成功時,才繼續往下執行===================================================
+if(session.getAttribute("muser_id") == null){//session timeout	
+   System.out.println(report_no+" login timeout");   
+   rd = application.getRequestDispatcher( "/pages/reLogin.jsp?url=LoginError.jsp?timeout=true" );         	   
+   try{
+      rd.forward(request,response);
+   }catch(Exception e){
+      System.out.println(report_no+"forward Error:"+e+e.getMessage());
+   }
+}else{
+  doProcess = true;
+}    
+if(!doProcess) return;
+Map dataMap =Utility.saveSearchParameter(request);
+	
+String act = Utility.getTrimString(dataMap.get("act"));				
+String muser_id = Utility.getTrimString(dataMap.get("muser_id"));
+//登入者資訊
+String lguser_id = ( session.getAttribute("muser_id")==null ) ? "" : (String)session.getAttribute("muser_id");		
+String lguser_name = ( session.getAttribute("muser_name")==null ) ? "" : (String)session.getAttribute("muser_name");		
+String lguser_type = ( session.getAttribute("muser_type")==null ) ? "" : (String)session.getAttribute("muser_type");	
+%>

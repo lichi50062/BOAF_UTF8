@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>BOAF_UTF8</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>BOAF_MIS_Pages</name>
+			<type>2</type>
+			<locationURI>BOAF_MIS_Pages</locationURI>
+		</link>
+		<link>
+			<name>BOAF_PAGES</name>
+			<type>2</type>
+			<locationURI>BOAF_PAGES</locationURI>
+		</link>
+		<link>
+			<name>MIS_PAGES</name>
+			<type>2</type>
+			<locationURI>MIS_PAGES</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>BOAF_PAGES</name>
+			<value>file:/D:/workProject/BOAF/pages</value>
+		</variable>
+		<variable>
+			<name>MIS_PAGES</name>
+			<value>file:/D:/workProject/MIS/pages</value>
+		</variable>
+	</variableList>
+</projectDescription>

@@ -1,0 +1,17 @@
+﻿<!-- 1.營運中/裁撤別 2.縣市別-->  
+<tr class="sbody">
+ <td><img src="images/2_icon_01.gif" width="16" height="16" align="absmiddle"><span class="mtext">營運中/裁撤別 :</span> 	 
+  <select name='CANCEL_NO' onchange="javascript:changeOption(document.forms[0],'change');">
+  	<option  value="N" <%if((!cancel_no.equals("")) && cancel_no.equals("N")) out.print("selected");%>>營運中</option>
+  	<option  value="Y" <%if((!cancel_no.equals("")) && cancel_no.equals("Y")) out.print("selected");%>>已裁撤</option>
+  </select>
+ </td>
+</tr>
+                          
+<tr class="sbody">                           
+  <td><img src="images/2_icon_01.gif" width="16" height="16" align="absmiddle"><span class="mtext">縣市別 :</span>                                                            
+     <select name="HSIEN_ID" onchange="javascript:changeOption(document.forms[0],'');"> 
+     <option value="ALL">全部</option>                                                             
+    </select>
+  </td>
+</tr>
